@@ -1,0 +1,122 @@
+:root {
+    --cor-principal: #ff7043;
+    --cor-secundaria: #ffab91;
+    --cor-escura: #333;
+    --cor-clara: #fff;
+    --fonte-principal: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: #fffaf6;
+    color: var(--cor-escura);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.menu {
+    background-color: var(--cor-principal);
+    padding: 1rem 2rem;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: var(--cor-clara);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    color: var(--cor-secundaria);
+    text-decoration: underline;
+}
+
+section {
+    flex: 1;
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+section h2 {
+    color: var(--cor-principal);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid var(--cor-secundaria);
+    display: inline-block;
+}
+
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria));
+    color: var(--cor-clara);
+    border-radius: 0 0 2rem 2rem;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: var(--cor-clara);
+    color: var(--cor-principal);
+    padding: 0.8rem 1.6rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-clara);
+}
+
+footer {
+    text-align: center;
+    background-color: var(--cor-principal);
+    color: var(--cor-clara);
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .menu ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    section {
+        margin: 2rem 1rem;
+    }
+}
